@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B站弹幕统计</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div id="input-container">
+        <h1>B站弹幕统计</h1>
+        <div class="input-group">
+            <input type="text" id="room-id" placeholder="请输入直播间ID">
+            <button onclick="startDanmu()">开始统计</button>
+        </div>
+        <div id="status"></div>
+    </div>
+
+    <div id="main-container">
+        <div class="danmu-container">
+            <h2>实时弹幕</h2>
+            <div id="danmu-list"></div>
+        </div>
+        <div class="stats-container">
+            <h2>词频统计</h2>
+            <canvas id="word-stats-chart"></canvas>
+        </div>
+    </div>
+
+    <div id="notification"></div>
+
+    <!-- 添加iframe按钮 -->
+    <button id="iframe-btn" class="iframe-btn">显示直播</button>
+
+    <!-- iframe弹窗 -->
+    <div id="iframe-modal" class="iframe-modal">
+        <div class="modal-header">
+            <span>输入直播地址</span>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="modal-content">
+            <input type="text" id="iframe-url" placeholder="请输入iframe地址">
+            <button onclick="showIframe()">确认</button>
+        </div>
+        <div class="iframe-container">
+            <iframe id="live-iframe" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
