@@ -19,7 +19,7 @@
 
 1. 克隆项目到本地：
 ```bash
-git clone https://github.com/yourusername/bilibili-danmu-stats.git
+git clone https://github.com/qwwkwjwwkwkwkkw/bilibili-danmu-stats.git
 cd bilibili-danmu-stats
 ```
 
@@ -129,4 +129,4 @@ MIT License
 
 如有问题或建议，请通过以下方式联系：
 - GitHub Issues
-- Email: your-email@example.com 
+- Email: huahuanyilong@163.com
