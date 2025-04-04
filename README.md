@@ -12,7 +12,7 @@
 
 ## 环境要求
 
-- Python 3.8+
+- Python 3.8-3.12（推荐使用 Python 3.11）
 - pip 包管理器
 
 ## 安装步骤
@@ -129,4 +129,4 @@ MIT License
 
 如有问题或建议，请通过以下方式联系：
 - GitHub Issues
-- Email: huahuanyilong@163.com
+- Email: your-email@example.com 
